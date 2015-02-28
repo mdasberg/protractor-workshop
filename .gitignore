@@ -6,6 +6,14 @@ logs
 src/js/templates.js
 src/css/workshop.css
 src/css/workshop.css.map
+.tmp
+build
+
+# Bower 
+bower_components
+
+# Node
+node_modules
 
 # Runtime data
 pids
