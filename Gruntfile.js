@@ -223,6 +223,10 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['<%=config.paths.src%>/{,*/}*.js']
+            },
+            html: {
+                files: ['<%=config.paths.src%>/partials/{,*/}*.html'],
+                tasks: ['ngtemplates']
             }
         },
         copy: {
@@ -325,7 +329,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', 'Execute tests.', function(suite) {
         var coverageTask = 'protractor_coverage';
-        if(suite !== undefined) {
+        if(typeof suite === 'string' && suite !== 'undefined') {
            coverageTask += ':' + suite;
         }
         grunt.task.run([
