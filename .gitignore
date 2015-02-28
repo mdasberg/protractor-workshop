@@ -2,8 +2,10 @@
 logs
 *.log
 
-# Template cache
+# Generated files
 src/js/templates.js
+src/css/workshop.css
+src/css/workshop.css.map
 
 # Runtime data
 pids
