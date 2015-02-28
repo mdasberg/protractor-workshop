@@ -1,17 +1,11 @@
     'use strict';
 
-    angular.module("repeatAfterMe", [])
-        .controller("AfterMeCtrl", AfterMeCtrl);
-
     function AfterMeCtrl() {
         var MAX_ALLOWED_DIGIT = 9;
         var SEQUENCE_LENGTH = 3;
 
-        this.sequence = generateSequence(SEQUENCE_LENGTH);
-        this.userSequence = "";
-
         function generateSequence(length) {
-            var sequence = "";
+            var sequence = '';
             var number;
 
             for (var i = 0; i < length; i++) {
@@ -32,12 +26,20 @@
 
         this.resetSequence = function() {
             this.sequence = generateSequence(SEQUENCE_LENGTH);
-            this.userSequence = "";
+            this.userSequence = '';
         }
 
         this.isAMatch = function() {
             return (this.sequence === this.userSequence);
         }
+
+        this.sequence = generateSequence(SEQUENCE_LENGTH);
+        this.userSequence = '';
     }
+    
+    angular.module('repeatAfterMe', [])
+        .controller('AfterMeCtrl', AfterMeCtrl);
+
+   
 
 
