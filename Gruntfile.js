@@ -36,7 +36,8 @@ module.exports = function (grunt) {
                 reporterOutput: '<%=config.paths.results%>/jshint/jshint.xml'
             },
             files: {
-                src: ['<%=config.paths.src%>/**/*.js']
+                src: ['<%=config.paths.src%>/**/*.js',
+                    '!<%=config.paths.src%>/**/templates.js']
             }
         },
         karma: {
