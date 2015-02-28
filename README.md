@@ -3,6 +3,21 @@ Protractor Workshop
 
 Protractor workshop
 
+## Usage
+
+1. Fetch all necessary things
+```
+npm install
+```
+2. Run a selenium server
+```
+node_modules/protractor/bin/webdriver-manager start
+```
+3. Run the application
+```
+grunt
+```
+
 
 ## Table of Contents
 
