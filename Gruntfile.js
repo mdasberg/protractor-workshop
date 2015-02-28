@@ -177,6 +177,7 @@ module.exports = function (grunt) {
                         return [
                             connect().use('/bower_components', connect.static('./bower_components')),
                             connect().use('/fonts', connect.static('./bower_components/bootstrap/fonts')),
+                            connect().use('/css', connect.static(config.paths.build + '/css')),
                             connect().use('/js', connect.static(config.paths.instrumented + '/' + config.paths.src + '/js')),
                             connect().use('/', connect.static(config.paths.src))
                         ];
@@ -189,7 +190,7 @@ module.exports = function (grunt) {
                 keepAlive: true,
                 noColor: false,
                 debug: false,
-                coverageDir: '<%=config.paths.results%>/protractor/coverage',
+                coverageDir: '<%=config.paths.results%>/protractor-coverage',
                 args: {
                     resultsDir: '<%=config.paths.results%>/protractor',
                     baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
@@ -205,10 +206,10 @@ module.exports = function (grunt) {
             }
         },
         makeReport: {
-            src: '<%=config.paths.results%>/protractor/coverage/*.json',
+            src: '<%=config.paths.results%>/protractor-coverage/*.json',
             options: {
                 type: 'lcov',
-                dir: '<%=config.paths.results%>/protractor/coverage',
+                dir: '<%=config.paths.results%>/protractor-coverage',
                 print: 'detail'
             }
         },
@@ -313,13 +314,16 @@ module.exports = function (grunt) {
     grunt.registerTask('prepare', 'Prepare the build with all the necessary stuff.', [
         'clean',
         //'shell:bowerupdate',
-        'portPick'
+        'portPick',
+        'less',
+        'copy',
+        'ngtemplates'
     ]);
 
     grunt.registerTask('test', 'Execute tests.', [
         'force:on',
-        //'jshint',
-        //'karma',
+        'jshint',
+        'karma',
         'instrument',
         'connect:test',
         'protractor_coverage',
@@ -328,9 +332,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('package', 'Package the code in a distributable format.', [
-        'less',
-        'copy',
-        'ngtemplates',
         'concat',
         'htmlmin',
         'uglify',

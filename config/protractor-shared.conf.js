@@ -1,4 +1,5 @@
 var grunt = require('grunt');
+var path = require('path');
 var allScriptsTimeout = 11000;
 
 exports.config = {
