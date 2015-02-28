@@ -1,10 +1,13 @@
 <div>
-    <h2>Grandfather of all knowledge</h2>
+    <h2 id="title" class="title">Grandfather of all knowledge</h2>
     <br/>
     <div class="question">
-        <input class="question__field" ng-model="gf.question.text"
+        <input class="question__field" name="question" ng-model="gf.question.text"
                placeholder="What would you like to ask the grandfather of all knowledge?">
         <button class="question__button" ng-click="gf.answerQuestion()" ng-disabled="!gf.question.text">?</button>
     </div>
-    <div class="answer">{{gf.answer}}</div>
+    <div class="answer" ng-if="gf.answer">
+       The answer to the question: "<span ng-bind="gf.question.text" class="text-info"></span>" is {{gf.answer}}
+    </div>
+
 </div>
