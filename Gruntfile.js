@@ -61,6 +61,17 @@ module.exports = function (grunt) {
                 }
             }
         },
+        ngtemplates: {
+            ifundit: {
+                options: {
+                    module: 'workshop'
+                },
+
+                cwd: '<%=config.paths.src%>',
+                src: 'partials/{,*/}*.html',
+                dest: '<%=config.paths.src%>/js/templates.js'
+            }
+        },
         concat: {
             options: {
                 separator: grunt.util.linefeed + ';' + grunt.util.linefeed
@@ -148,6 +159,7 @@ module.exports = function (grunt) {
                     },
                     middleware: function (connect) {
                         return [
+                            connect().use('/bower_components', connect.static('./bower_components')),
                             connect().use('/', connect.static(grunt.config.get('config').paths.build))
                         ];
                     }
@@ -319,6 +331,7 @@ module.exports = function (grunt) {
     grunt.registerTask('package', 'Package the code in a distributable format.', [
         'less',
         'copy',
+        'ngtemplates',
         'concat',
         'htmlmin',
         'uglify',
