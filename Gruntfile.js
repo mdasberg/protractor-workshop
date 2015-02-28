@@ -172,11 +172,10 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         var config = grunt.config.get('config');
                         return [
-                            connect().use('/' + config.paths.src + '/bower_components', connect.static('./bower_components')),
-                            connect().use('/' + config.paths.src + '/fonts', connect.static('./bower_components/bootstrap/fonts')),
-                            connect().use('/' + config.paths.src + '/js', connect.static(config.paths.instrumented + '/' + config.paths.src + '/js')),
-                            connect().use('/' + config.paths.src, connect.static(config.paths.src)),
-                            connect().use('/' + config.paths.test, connect.static(config.paths.test))
+                            connect().use('/bower_components', connect.static('./bower_components')),
+                            connect().use('/fonts', connect.static('./bower_components/bootstrap/fonts')),
+                            connect().use('/js', connect.static(config.paths.instrumented + '/' + config.paths.src + '/js')),
+                            connect().use('/', connect.static(config.paths.src))
                         ];
                     }
                 }
@@ -217,10 +216,6 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['<%=config.paths.src%>/{,*/}*.js']
-            //},
-            //html: {
-            //    '<%=config.paths.src%>/{,*/}*.html'
-            //
             }
         },
         copy: {
@@ -320,8 +315,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', 'Execute tests.', [
         'force:on',
-        'jshint',
-        'karma',
+        //'jshint',
+        //'karma',
         'instrument',
         'connect:test',
         'protractor_coverage',
