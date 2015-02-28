@@ -1,0 +1,34 @@
+<div>
+    <h2>Repeat after me - {{af.sequence}} <span ng-class="{green: af.isAMatch(), red: !af.isAMatch()}">{{af.userSequence}}</span> </h2>
+    <br/>
+    <div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="key-group text-center">
+                <button ng-click="af.updateUserSequence(1)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">1</button>
+                <button ng-click="af.updateUserSequence(2)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">2</button>
+                <button ng-click="af.updateUserSequence(3)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">3</button>
+            </div>
+            <div class="key-group text-center">
+                <button ng-click="af.updateUserSequence(4)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">4</button>
+                <button ng-click="af.updateUserSequence(5)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">5</button>
+                <button ng-click="af.updateUserSequence(6)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">6</button>
+            </div>
+            <div class="key-group text-center">
+                <button ng-click="af.updateUserSequence(7)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">7</button>
+                <button ng-click="af.updateUserSequence(8)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">8</button>
+                <button ng-click="af.updateUserSequence(9)" ng-disabled="af.disableButton()" class="btn btn-default btn-lg">9</button>
+            </div>
+            <div class="text-center">
+                <br />
+                <button ng-click="af.resetSequence()" class="btn btn-default btn-lg">Try again</button>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</div>

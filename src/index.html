@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Protractor workshop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="robots" content="noindex">
+
+        <!-- build:css({.tmp,src}) css/workshop.min.css -->
+        <link rel="stylesheet" href="css/workshop.css">
+        <!-- endbuild -->
+
+        <!-- build:js js/plugins.min.js -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js js/angular.min.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js js/modules.min.js -->
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js js/workshop.min.js -->
+        <script src="js/workshop.js"></script>
+        <script src="js/grandfather.js"></script>
+        <script src="js/afterMe.js"></script>
+        <!-- endbuild -->
+
+    </head>
+    <body ng-app="workshop">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation"
+                            ng-click="triggerToggle()">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="img/logo.png" height="50"/> Workshop
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a ng-href="/#/grandfather-of-all-knowledge"><span class="glyphicon glyphicon-menu-right"></span>
+                                Grandfather of all knowledge</a>
+                        </li>
+                        <li><a ng-href="/#/repeat-after-me"><span class="glyphicon glyphicon-menu-right"></span> Repeat after me</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="container-fluid" style="border-top: 1px solid lightgrey;">
+                    <br/>
+                    <div class="container" ng-view>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </body>
+</html>
