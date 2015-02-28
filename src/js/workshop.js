@@ -10,7 +10,8 @@
         'ngSanitize',
         'ngTouch',
         'grandfatherOfAllKnowledge',
-        'repeatAfterMe'
+        'repeatAfterMe',
+        'releases'
     ]).config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/grandfather-of-all-knowledge', {
@@ -22,6 +23,11 @@
                 templateUrl: 'partials/afterMe.html',
                 controller: 'AfterMeCtrl',
                 controllerAs: 'af'
+            })
+            .when('/releases', {
+                templateUrl: 'partials/releases.html',
+                controller: 'ReleasesCtrl',
+                controllerAs: 'rel'
             })
             .otherwise({
                 redirectTo: '/'
