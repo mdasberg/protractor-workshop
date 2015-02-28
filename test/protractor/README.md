@@ -1,0 +1,1 @@
+This folder will contain all your protractor tests and pageobjects
