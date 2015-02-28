@@ -346,9 +346,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'prepare',
         'test',
-        'verify',
         'package',
-        'integration-test',
         'release'
     ]);
 };
