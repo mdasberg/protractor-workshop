@@ -26,7 +26,10 @@ module.exports = function (grunt) {
                 '<%=config.paths.tmp%>',
                 '<%=config.paths.results%>',
                 '<%=config.paths.instrumented%>',
-                '<%=config.paths.build%>'
+                '<%=config.paths.build%>',
+                '<%=config.paths.src%>/css/*.css',
+                '<%=config.paths.src%>/css/*.css.map',
+                '<%=config.paths.src%>/js/templates.js'
             ]
         },
         jshint: {
@@ -309,7 +312,7 @@ module.exports = function (grunt) {
     /** Prepare the build with all the necessary stuff. */
     grunt.registerTask('prepare', 'Prepare the build with all the necessary stuff.', [
         'clean',
-        'shell:bowerupdate',
+        //'shell:bowerupdate',
         'portPick'
     ]);
 
