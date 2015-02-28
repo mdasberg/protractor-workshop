@@ -2,6 +2,9 @@
 logs
 *.log
 
+# Template cache
+src/js/templates.js
+
 # Runtime data
 pids
 *.pid
