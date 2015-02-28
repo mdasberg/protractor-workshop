@@ -187,10 +187,11 @@ module.exports = function (grunt) {
         },
         protractor_coverage: {
             options: {
+                configFile: 'config/protractor-local.conf.js',
                 keepAlive: true,
                 noColor: false,
                 debug: false,
-                coverageDir: '<%=config.paths.results%>/protractor-coverage',
+                coverageDir: '<%=config.paths.results%>/protractor/coverage',
                 args: {
                     resultsDir: '<%=config.paths.results%>/protractor',
                     baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
@@ -199,9 +200,11 @@ module.exports = function (grunt) {
                     ]
                 }
             },
-            local: {
+            locators: {
                 options: {
-                    configFile: 'config/protractor-local.conf.js'
+                    suites: {
+                        locators: ['test/protractor/**/locatorExerciseSpec.js']
+                    }
                 }
             }
         },
@@ -313,23 +316,29 @@ module.exports = function (grunt) {
     /** Prepare the build with all the necessary stuff. */
     grunt.registerTask('prepare', 'Prepare the build with all the necessary stuff.', [
         'clean',
-        //'shell:bowerupdate',
+        'shell:bowerupdate',
         'portPick',
         'less',
         'copy',
         'ngtemplates'
     ]);
 
-    grunt.registerTask('test', 'Execute tests.', [
-        'force:on',
-        'jshint',
-        'karma',
-        'instrument',
-        'connect:test',
-        'protractor_coverage',
-        'makeReport',
-        'force:reset'
-    ]);
+    grunt.registerTask('test', 'Execute tests.', function(suite) {
+        var coverageTask = 'protractor_coverage';
+        if(suite !== undefined) {
+           coverageTask += ':' + suite;
+        }
+        grunt.task.run([
+            'force:on',
+            'jshint',
+            'karma',
+            'instrument',
+            'connect:test',
+            coverageTask,
+            'makeReport',
+            'force:reset'
+        ]);
+    });
 
     grunt.registerTask('package', 'Package the code in a distributable format.', [
         'concat',
@@ -343,10 +352,12 @@ module.exports = function (grunt) {
         grunt.log.subhead('Not applicable yet build');
     });
 
-    grunt.registerTask('default', [
-        'prepare',
-        'test',
-        'package',
-        'release'
-    ]);
+    grunt.registerTask('default', 'Default task', function(suite) {
+        grunt.task.run([
+            'prepare',
+            'test:' + suite,
+            'package',
+            'release'
+        ]);
+    });
 };
