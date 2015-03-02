@@ -66,7 +66,7 @@ module.exports = function (grunt) {
             }
         },
         ngtemplates: {
-            ifundit: {
+            workshop: {
                 options: {
                     module: 'workshop'
                 },
