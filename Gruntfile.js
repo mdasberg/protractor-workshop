@@ -186,24 +186,30 @@ module.exports = function (grunt) {
             }
         },
         protractor_coverage: {
-            options: {
-                configFile: 'config/protractor-local.conf.js',
-                keepAlive: true,
-                noColor: false,
-                debug: false,
-                coverageDir: '<%=config.paths.results%>/protractor/coverage',
-                args: {
-                    resultsDir: '<%=config.paths.results%>/protractor',
-                    baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
-                    specs: [
-                        '<%=config.paths.test%>/protractor/**/*Spec.js'
-                    ]
-                }
-            },
             locators: {
                 options: {
-                    suites: {
-                        locators: ['test/protractor/**/locatorExerciseSpec.js']
+                    configFile: 'config/protractor-local.conf.js',
+                    keepAlive: true,
+                    noColor: false,
+                    debug: false,
+                    coverageDir: '<%=config.paths.results%>/protractor-coverage',
+                    args: {
+                        resultsDir: '<%=config.paths.results%>/protractor',
+                        specs: ['<%=config.paths.test%>/protractor/locator*Spec.js']
+                    }
+                }
+            },
+            chain: {
+                options: {
+                    configFile: 'config/protractor-local.conf.js',
+                    keepAlive: true,
+                    noColor: false,
+                    debug: false,
+                    coverageDir: '<%=config.paths.results%>/protractor-coverage',
+                    args: {
+                        baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
+                        resultsDir: '<%=config.paths.results%>/protractor',
+                        specs: ['<%=config.paths.test%>/protractor/chain*Spec.js']
                     }
                 }
             }
