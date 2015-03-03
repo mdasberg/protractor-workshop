@@ -11,7 +11,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=webdriver.By.className
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getAttribute('placeholder')).toBe('What would you like to ask the grandfather of all knowledge?');
         });
@@ -21,7 +21,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=webdriver.By.css
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
@@ -31,7 +31,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=webdriver.By.id
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
@@ -41,7 +41,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=webdriver.By.name
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getAttribute('placeholder')).toBe('What would you like to ask the grandfather of all knowledge?');
         });
@@ -51,7 +51,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=webdriver.By.tagName
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
@@ -61,7 +61,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=webdriver.By.xpath
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
@@ -76,7 +76,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.binding
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).not.toBeUndefined();
         });
@@ -86,7 +86,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.exactBinding
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).not.toBeUndefined();
         });
@@ -96,7 +96,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.buttonText
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
         });
 
@@ -105,7 +105,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.partialButtonText
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
         });
 
@@ -114,7 +114,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.cssContainingText
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
         });
     });
@@ -128,7 +128,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.repeater
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
         });
 
@@ -137,7 +137,7 @@ describe("Locator exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.exactRepeater
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.isPresent()).toBe(true);
         });
     });

@@ -17,7 +17,7 @@ describe("Chain exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.getText()).toBe('What do I like');
         });
 
@@ -35,7 +35,7 @@ describe("Chain exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.getText()).toBe('1.8.0');
         });
 
@@ -46,7 +46,7 @@ describe("Chain exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.getText()).toBe('1.7.0');
         });
 
@@ -57,7 +57,7 @@ describe("Chain exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.getText()).toBe('0.18.0');
         });
 
@@ -68,7 +68,7 @@ describe("Chain exercises", function () {
 
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
-            var el;  /* inplement me */
+            var el;  /* implement me */
             expect(el.getText()).toBe(30);
         });
 
