@@ -7,37 +7,61 @@ describe("Locator exercises", function () {
         });
 
         it('should find the question by webdriver locator :className', function () {
-            var el = element(by.className('...'));
+            // 1. Find the element by class name
+
+            // see: http://angular.github.io/protractor/#/api?view=webdriver.By.className
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getAttribute('placeholder')).toBe('What would you like to ask the grandfather of all knowledge?');
         });
 
         it('should find the title by webdriver locator :css', function () {
-            var el = element(by.css('...'));
+            // 1. Find the element by css
+
+            // see: http://angular.github.io/protractor/#/api?view=webdriver.By.css
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
 
         it('should find the title by webdriver locator :id', function () {
-            var el = element(by.id('...'));
+            // 1. Find the element by id
+
+            // see: http://angular.github.io/protractor/#/api?view=webdriver.By.id
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
 
         it('should find question placeholder by webdriver locator :name', function () {
-            var el = element(by.name('...'));
+            // 1. Find the element by name
+
+            // see: http://angular.github.io/protractor/#/api?view=webdriver.By.name
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getAttribute('placeholder')).toBe('What would you like to ask the grandfather of all knowledge?');
         });
 
         it('should find the title by webdriver locator :tagName', function () {
-            var el = element(by.tagName('...'));
+            // 1. Find the element by tagName
+
+            // see: http://angular.github.io/protractor/#/api?view=webdriver.By.tagName
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
 
         it('should find the title by webdriver locator :xpath', function () {
-            var el = element(by.xpath('...'));
+            // 1. Find the element by xpath
+
+            // see: http://angular.github.io/protractor/#/api?view=webdriver.By.xpath
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).toBe('Grandfather of all knowledge')
         });
@@ -48,29 +72,49 @@ describe("Locator exercises", function () {
         });
 
         it('should find the sequence by protractor locator :binding', function () {
-            var el = element(by.binding('...'));
+            // 1. Find the element by binding
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.binding
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).not.toBeUndefined();
         });
-        
+
         it('should find the sequence by protractor locator :exactBinding', function () {
-            var el = element(by.exactBinding('...'));
+            // 1. Find the element by exact binding
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.exactBinding
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
             expect(el.getText()).not.toBeUndefined();
         });
 
         it('should find the Try again button by protractor locator :buttonText', function () {
-            var el = element(by.buttonText('...'));
+            // 1. Find the element by buttonText
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.buttonText
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
         });
 
         it('should find the Try again button by protractor locator :partialButtonText', function () {
-            var el = element(by.partialButtonText('...'));
+            // 1. Find the element by partialButtonText
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.partialButtonText
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
         });
 
         it('should find the title by protractor locator :cssContainingText', function () {
-            var el = element(by.cssContainingText('...', '...'));
+            // 1. Find the element by cssContainingText
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.cssContainingText
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
         });
     });
@@ -80,12 +124,20 @@ describe("Locator exercises", function () {
         });
 
         it('should find the releases by protractor locator :repeater', function () {
-            var el = element(by.repeater('...'));
+            // 1. Find the element by repeater
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.repeater
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
         });
 
         it('should find the releases by protractor locator :exactRepeater', function () {
-            var el = element(by.exactRepeater('...'));
+            // 1. Find the element by exactRepeater
+
+            // see: http://angular.github.io/protractor/#/api?view=ProtractorBy.prototype.exactRepeater
+
+            var el;  /* inplement me */
             expect(el.isPresent()).toBe(true);
         });
     });
