@@ -18,20 +18,20 @@
 
         this.updateUserSequence = function(char) {
             this.userSequence = this.userSequence.concat(char);
-        }
+        };
 
         this.disableButton = function() {
             return (this.userSequence.length === SEQUENCE_LENGTH);
-        }
+        };
 
         this.resetSequence = function() {
             this.sequence = generateSequence(SEQUENCE_LENGTH);
             this.userSequence = '';
-        }
+        };
 
         this.isAMatch = function() {
             return (this.sequence === this.userSequence);
-        }
+        };
 
         this.sequence = generateSequence(SEQUENCE_LENGTH);
         this.userSequence = '';
