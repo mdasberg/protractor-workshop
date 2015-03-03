@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         config: {
             hosts: {
-                runtime: '0.0.0.0'
+                runtime: 'localhost'
             },
             paths: {
                 tmp: '.tmp',
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
         connect: {
             options: {
                 port: 0,
-                hostname: '<%= config.hosts.runtime%>'
+                hostname: '0.0.0.0'
             },
             runtime: {
                 options: {
