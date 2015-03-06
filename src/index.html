@@ -37,8 +37,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <!-- endbuild -->
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
 
     <!-- build:js js/workshop.min.js -->
     <script src="js/workshop.js"></script>
@@ -48,26 +48,27 @@
     <!-- endbuild -->
     
     <!--
-    // 1. Uncomment the script below
-    // 2. Change ng-app="workshop" to ng-app="workshopDev"
-    // 3. Mock the api call
+    // 1. return a 404 status code with message 'Oops, I could not get what you were looking for'
 
     // see: https://docs.angularjs.org/api/ngMockE2E/service/$httpBackend
     -->
 
-    <!--<script type="text/javascript">-->
-        <!--angular.module('workshopDev', ['workshop', 'ngMockE2E'])-->
-                <!--.run(function ($httpBackend) {-->
-                    <!--$httpBackend.whenGET(/partials\/\w+.*/).passThrough(); // don't mock html-->
-                    <!--$httpBackend.whenGET('https://api.github.com/repos/angular/protractor/tags').passThrough();-->
-                <!--}-->
-        <!--);-->
+    <script type="text/javascript">
+        angular.module('workshopDev', ['workshop', 'ngMockE2E'])
+                .run(function ($httpBackend) {
+                    $httpBackend.whenGET(/partials\/\w+.*/).passThrough(); // don't mock html
+                    $httpBackend.whenGET('https://api.github.com/repos/angular/protractor/tags').respond([
+                        {name: '1.8.0'}, {name: '1.7.0'}, {name:'1.6.0'}, {name:'0.18.0'}
+                            
+                    ], 'application/json');
+                }
+        );
 
 
-    <!--</script>-->
+    </script>
 
 </head>
-<body ng-app="workshop">
+<body ng-app="workshopDev">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
