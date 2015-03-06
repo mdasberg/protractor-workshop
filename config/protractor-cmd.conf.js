@@ -4,7 +4,7 @@ var config = require('./protractor-shared.conf').config;
 config.seleniumAddress = 'http://localhost:4444/wd/hub';
 
 config.specs = [
-    'test/protractor/**/*Spec.js'
+    '../test/protractor/**/*Spec.js'
 ];
 
 config.baseUrl = 'http://localhost:9000';
