@@ -205,7 +205,7 @@ module.exports = function (grunt) {
                     args: {
                         baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
                         resultsDir: '<%=config.paths.results%>/protractor',
-                        specs: ['<%=config.paths.test%>/protractor/promise*Spec.js']
+                        specs: ['<%=config.paths.test%>/protractor/locators*Spec.js']
                     }
                 }
             },
