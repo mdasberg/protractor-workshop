@@ -352,7 +352,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('prepare', 'Prepare the build with all the necessary stuff.', [
         'clean',
-        'shell:bowerupdate',
+        //'shell:bowerupdate',
         'portPick',
         'less',
         'copy',
