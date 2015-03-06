@@ -11,7 +11,17 @@ function ReleaseService($resource) {
 
 function ReleasesCtrl(ReleaseService) {
     var vm = this;
-    vm.releases = ReleaseService.get({});
+    ReleaseService.get({},
+        function(data){
+            // succes
+            vm.releases = data;
+            return vm.releases;
+        },
+        function(error){
+            //error flow.
+            vm.error = error.data;
+            return vm.error;
+    });
 }
 
 ReleaseService.$inject = ['$resource'];
