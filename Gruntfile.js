@@ -191,11 +191,16 @@ module.exports = function (grunt) {
                 keepAlive: true,
                 noColor: false,
                 debug: false,
-                coverageDir: '<%=config.paths.results%>/protractor-coverage',
-                args: {
-                    baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
-                    resultsDir: '<%=config.paths.results%>/protractor',
-                    specs: ['<%=config.paths.test%>/protractor/**/*Spec.js']
+            },
+            all: {
+                options: {
+
+                    coverageDir: '<%=config.paths.results%>/protractor-coverage',
+                    args: {
+                        baseUrl: 'http://<%= config.hosts.runtime %>:<%= connect.test.options.port %>',
+                        resultsDir: '<%=config.paths.results%>/protractor',
+                        specs: ['<%=config.paths.test%>/protractor/*Spec.js']
+                    }
                 }
             },
             locators: {
