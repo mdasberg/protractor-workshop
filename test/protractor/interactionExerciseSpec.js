@@ -13,7 +13,7 @@ describe("Interaction exercises", function () {
             // 4. Verify the answer
 
             var answerElement; /* implement me */
-            expect(answerElement.getText()).toBe('Chocolate')
+            expect(answerElement.getText()).toContain('is Chocolate')
         });
 
         it('should not be able to ask an empty question', function () {
@@ -38,8 +38,8 @@ describe("Interaction exercises", function () {
             // 3. Find button 9
             // 4. Click button 9
             // 5. Find button 7
-            // 5. Click button 7
-            // 6. Verify the entered user sequence
+            // 6. Click button 7
+            // 7. Verify the entered user sequence
 
             var userSequenceElement; /* implement me */
             expect(userSequenceElement.getText()).toBe('497')

@@ -20,8 +20,6 @@ describe("Chain exercises", function () {
             var el;  /* implement me */
             expect(el.getText()).toBe('What do I like');
         });
-
-
     });
     describe("The releases", function () {
         beforeEach(function () {
@@ -36,7 +34,7 @@ describe("Chain exercises", function () {
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
             var el;  /* implement me */
-            expect(el.getText()).toBe('1.8.0');
+            expect(el.getText()).toBe('2.1.0');
         });
 
         it('should get the previous release of protractor', function () {
@@ -47,7 +45,7 @@ describe("Chain exercises", function () {
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
             var el;  /* implement me */
-            expect(el.getText()).toBe('1.7.0');
+            expect(el.getText()).toBe('2.1.0');
         });
 
         it('should get the initial release of protractor', function () {
@@ -58,7 +56,7 @@ describe("Chain exercises", function () {
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 
             var el;  /* implement me */
-            expect(el.getText()).toBe('0.18.0');
+            expect(el.getText()).toBe('0.19.0');
         });
 
         it('should get the number of releases of protractor', function () {
@@ -67,9 +65,8 @@ describe("Chain exercises", function () {
             // 3. find the number of release
 
             // see: http://angular.github.io/protractor/#/api?view=ElementArrayFinder
-
-            var el;  /* implement me */
-            expect(el.getText()).toBe(30);
+            var els; /* implement me */
+            expect(els.count()).toBe(30);
         });
 
     });
