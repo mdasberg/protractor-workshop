@@ -1,13 +1,22 @@
 'use strict';
 
-function GrandfatherCtrl() {
-    this.question = {};
-    this.answer = '';
+function GrandfatherCtrl($scope) {
+    var vm = this;
+    vm.question = {};
+    vm.answer = undefined;
 
-    this.answerQuestion = function () {
+    vm.answerQuestion = function () {
         this.answer = 'Chocolate!';
     }
+
+    $scope.$watch('gf.question.text', function(current, original) {
+        if(original !== current) {
+            vm.answer = undefined;
+        }
+    });
 }
+
+GrandfatherCtrl.$inject = ['$scope'];
 
 angular.module('grandfatherOfAllKnowledge', [])
     .controller('GrandfatherCtrl', GrandfatherCtrl);

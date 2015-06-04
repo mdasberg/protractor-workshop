@@ -7,7 +7,7 @@ config.specs = [
     '../test/protractor/**/*Spec.js'
 ];
 
-config.baseUrl = 'http://localhost:9000';
+config.baseUrl = 'http://localhost:9002';
 
 config.multiCapabilities = [
     {

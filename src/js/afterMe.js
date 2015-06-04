@@ -36,7 +36,7 @@
         this.sequence = generateSequence(SEQUENCE_LENGTH);
         this.userSequence = '';
     }
-    
+
     angular.module('repeatAfterMe', [])
         .controller('AfterMeCtrl', AfterMeCtrl);
 
