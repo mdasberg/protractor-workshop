@@ -6,7 +6,7 @@
                placeholder="What would you like to ask the grandfather of all knowledge?">
         <button class="question__button" ng-click="gf.answerQuestion()" ng-disabled="!gf.question.text">?</button>
     </div>
-    <div class="answer" ng-if="gf.answer">
+    <div class="answer" ng-if="gf.answer !== undefined">
        The answer to the question: "<span ng-bind="gf.question.text" class="text-info"></span>" is {{gf.answer}}
     </div>
 
