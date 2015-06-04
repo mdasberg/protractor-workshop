@@ -46,7 +46,7 @@
     <script src="js/afterMe.js"></script>
     <script src="js/releases.js"></script>
     <!-- endbuild -->
-    
+
     <!--
     // 1. return a 404 status code with message 'Oops, I could not get what you were looking for'
 
@@ -58,8 +58,277 @@
                 .run(function ($httpBackend) {
                     $httpBackend.whenGET(/partials\/\w+.*/).passThrough(); // don't mock html
                     $httpBackend.whenGET('https://api.github.com/repos/angular/protractor/tags').respond([
-                        {name: '1.8.0'}, {name: '1.7.0'}, {name:'1.6.0'}, {name:'0.18.0'}
-                            
+                        {
+                            "name": "2.1.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/2.1.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/2.1.0",
+                            "commit": {
+                                "sha": "db2ac651eb6f64d31aa93952667e1d0759cd9394",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/db2ac651eb6f64d31aa93952667e1d0759cd9394"
+                            }
+                        },
+                        {
+                            "name": "2.0.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/2.0.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/2.0.0",
+                            "commit": {
+                                "sha": "1d8f14eb7e3fd7c8607ef1ffa2d6c0b29cc802b1",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/1d8f14eb7e3fd7c8607ef1ffa2d6c0b29cc802b1"
+                            }
+                        },
+                        {
+                            "name": "1.8.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.8.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.8.0",
+                            "commit": {
+                                "sha": "29ce5c6ad0d24d06f03f0a7736af4f6a91d4bf3f",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/29ce5c6ad0d24d06f03f0a7736af4f6a91d4bf3f"
+                            }
+                        },
+                        {
+                            "name": "1.7.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.7.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.7.0",
+                            "commit": {
+                                "sha": "9ef24c5f907acedada6858991500d9dfc8b9456a",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/9ef24c5f907acedada6858991500d9dfc8b9456a"
+                            }
+                        },
+                        {
+                            "name": "1.6.1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.6.1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.6.1",
+                            "commit": {
+                                "sha": "f9ce40dd2a8cba9e8b30433e61056a96d913041c",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/f9ce40dd2a8cba9e8b30433e61056a96d913041c"
+                            }
+                        },
+                        {
+                            "name": "1.6.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.6.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.6.0",
+                            "commit": {
+                                "sha": "c94c388e400db0a128da202d6ac72be6fbe7873a",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/c94c388e400db0a128da202d6ac72be6fbe7873a"
+                            }
+                        },
+                        {
+                            "name": "1.5.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.5.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.5.0",
+                            "commit": {
+                                "sha": "26c7c3d7325f931c1e6d717cee9beb269de21dc8",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/26c7c3d7325f931c1e6d717cee9beb269de21dc8"
+                            }
+                        },
+                        {
+                            "name": "1.4.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.4.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.4.0",
+                            "commit": {
+                                "sha": "58197ea68cfdf89771ad326457669e68f8add571",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/58197ea68cfdf89771ad326457669e68f8add571"
+                            }
+                        },
+                        {
+                            "name": "1.3.1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.3.1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.3.1",
+                            "commit": {
+                                "sha": "94240b204244af13b84ade66f80d97e7f0404ff5",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/94240b204244af13b84ade66f80d97e7f0404ff5"
+                            }
+                        },
+                        {
+                            "name": "1.3.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.3.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.3.0",
+                            "commit": {
+                                "sha": "7d03e79d3c3122999057b7faa9716f8474b0fec4",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/7d03e79d3c3122999057b7faa9716f8474b0fec4"
+                            }
+                        },
+                        {
+                            "name": "1.2.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.2.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.2.0",
+                            "commit": {
+                                "sha": "c070d44cb50c36cfacb7a05d4bb94470370b4236",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/c070d44cb50c36cfacb7a05d4bb94470370b4236"
+                            }
+                        },
+                        {
+                            "name": "1.1.1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.1.1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.1.1",
+                            "commit": {
+                                "sha": "84291ca8b5eb1c55cb0f1751622d692a1bbd35b5",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/84291ca8b5eb1c55cb0f1751622d692a1bbd35b5"
+                            }
+                        },
+                        {
+                            "name": "1.1.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.1.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.1.0",
+                            "commit": {
+                                "sha": "d48c3db0b8d84d6cb142a9f5a33e4d44075a5997",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/d48c3db0b8d84d6cb142a9f5a33e4d44075a5997"
+                            }
+                        },
+                        {
+                            "name": "1.0.0-rc6",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0-rc6",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0-rc6",
+                            "commit": {
+                                "sha": "cab6d52d02c0fb8caad476467a73480ce728f078",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/cab6d52d02c0fb8caad476467a73480ce728f078"
+                            }
+                        },
+                        {
+                            "name": "1.0.0-rc5",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0-rc5",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0-rc5",
+                            "commit": {
+                                "sha": "60df563b3a311221ad8b97128523286fb2d4a078",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/60df563b3a311221ad8b97128523286fb2d4a078"
+                            }
+                        },
+                        {
+                            "name": "1.0.0-rc4",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0-rc4",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0-rc4",
+                            "commit": {
+                                "sha": "14d0546de34c29fa581d338b8a7f2a062b877c91",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/14d0546de34c29fa581d338b8a7f2a062b877c91"
+                            }
+                        },
+                        {
+                            "name": "1.0.0-rc3",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0-rc3",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0-rc3",
+                            "commit": {
+                                "sha": "2ceeb115716766675bcfa43c660c706b0a2cd258",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/2ceeb115716766675bcfa43c660c706b0a2cd258"
+                            }
+                        },
+                        {
+                            "name": "1.0.0-rc2",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0-rc2",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0-rc2",
+                            "commit": {
+                                "sha": "fc18fc8d9cebe225b60b19754f80b6ddd51c30b8",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/fc18fc8d9cebe225b60b19754f80b6ddd51c30b8"
+                            }
+                        },
+                        {
+                            "name": "1.0.0-rc1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0-rc1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0-rc1",
+                            "commit": {
+                                "sha": "d780f44a40d8367f42d3a66a2f9e42d59169ec80",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/d780f44a40d8367f42d3a66a2f9e42d59169ec80"
+                            }
+                        },
+                        {
+                            "name": "1.0.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/1.0.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/1.0.0",
+                            "commit": {
+                                "sha": "788e475e1cf6f84fa4e32d838362f20669969a49",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/788e475e1cf6f84fa4e32d838362f20669969a49"
+                            }
+                        },
+                        {
+                            "name": "0.24.2",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.24.2",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.24.2",
+                            "commit": {
+                                "sha": "8582b195ed0f4d48a0d9513017b21e99f8feb2fe",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/8582b195ed0f4d48a0d9513017b21e99f8feb2fe"
+                            }
+                        },
+                        {
+                            "name": "0.24.1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.24.1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.24.1",
+                            "commit": {
+                                "sha": "24248d65efc4bdc9bf61dd8833595226b44232fa",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/24248d65efc4bdc9bf61dd8833595226b44232fa"
+                            }
+                        },
+                        {
+                            "name": "0.24.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.24.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.24.0",
+                            "commit": {
+                                "sha": "857b3aed235f7a3260305cc36ed79be3c9a1b2d0",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/857b3aed235f7a3260305cc36ed79be3c9a1b2d0"
+                            }
+                        },
+                        {
+                            "name": "0.23.1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.23.1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.23.1",
+                            "commit": {
+                                "sha": "b01ea8370cadeab24ae35a028c90587f27114a4b",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/b01ea8370cadeab24ae35a028c90587f27114a4b"
+                            }
+                        },
+                        {
+                            "name": "0.23.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.23.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.23.0",
+                            "commit": {
+                                "sha": "c07f9d09f6c7c2ac05895fec3b42eafb62125d4f",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/c07f9d09f6c7c2ac05895fec3b42eafb62125d4f"
+                            }
+                        },
+                        {
+                            "name": "0.22.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.22.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.22.0",
+                            "commit": {
+                                "sha": "ceb7aa77150f79fe9533d2dfeb873c46ce0b522f",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/ceb7aa77150f79fe9533d2dfeb873c46ce0b522f"
+                            }
+                        },
+                        {
+                            "name": "0.21.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.21.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.21.0",
+                            "commit": {
+                                "sha": "3c699bd80ff9fdabf7d3179af270dc0685ca0b5f",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/3c699bd80ff9fdabf7d3179af270dc0685ca0b5f"
+                            }
+                        },
+                        {
+                            "name": "0.20.1",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.20.1",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.20.1",
+                            "commit": {
+                                "sha": "2f7c25ac93ea1c05df4d6d0f4027262c03f508d0",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/2f7c25ac93ea1c05df4d6d0f4027262c03f508d0"
+                            }
+                        },
+                        {
+                            "name": "0.20.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.20.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.20.0",
+                            "commit": {
+                                "sha": "7af550f0213a2e16611d8c5c4febe4afe4ed7e2a",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/7af550f0213a2e16611d8c5c4febe4afe4ed7e2a"
+                            }
+                        },
+                        {
+                            "name": "0.19.0",
+                            "zipball_url": "https://api.github.com/repos/angular/protractor/zipball/0.19.0",
+                            "tarball_url": "https://api.github.com/repos/angular/protractor/tarball/0.19.0",
+                            "commit": {
+                                "sha": "4630759629f98237b3632c97702062159c787190",
+                                "url": "https://api.github.com/repos/angular/protractor/commits/4630759629f98237b3632c97702062159c787190"
+                            }
+                        }
+
                     ], 'application/json');
                 }
         );
