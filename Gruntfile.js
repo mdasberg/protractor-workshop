@@ -4,6 +4,7 @@ module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
+    var serveStatic = require('serve-static');
 
     grunt.initConfig({
         config: {
@@ -82,20 +83,20 @@ module.exports = function (grunt) {
             },
             angular: {
                 files: {
-                    'build/js/angular.min.js': ['bower_components/angular/angular.min.js']
+                    'build/js/angular.min.js': ['node_modules/angular/angular.min.js']
                 }
             },
             modules: {
                 files: {
                     'build/js/modules.min.js': [
-                        'bower_components/angular-*/*.min.js'
+                        'node_modules/angular-*/*.min.js'
                     ]
                 }
             },
             plugins: {
                 files: {
                     'build/js/plugins.min.js': [
-                        'bower_components/jquery/dist/jquery.min.js'
+                        'node_modules/jquery/dist/jquery.min.js'
                     ]
                 }
             },
@@ -148,10 +149,10 @@ module.exports = function (grunt) {
                         var config = grunt.config.get('config');
 
                         return [
-                            connect().use('/bower_components', connect.static('./bower_components')),
-                            connect().use('/fonts', connect.static('./bower_components/bootstrap/fonts')),
-                            connect().use('/css', connect.static(config.paths.build + '/css')),
-                            connect().use('/', connect.static(config.paths.src))
+                            connect().use('/node_modules', serveStatic('./node_modules')),
+                            connect().use('/fonts', serveStatic('./node_modules/bootstrap/fonts')),
+                            connect().use('/css', serveStatic(config.paths.build + '/css')),
+                            connect().use('/', serveStatic(config.paths.src))
                         ];
                     }
                 }
@@ -163,8 +164,8 @@ module.exports = function (grunt) {
                     },
                     middleware: function (connect) {
                         return [
-                            connect().use('/bower_components', connect.static('./bower_components')),
-                            connect().use('/', connect.static(grunt.config.get('config').paths.build))
+                            connect().use('/node_modules', serveStatic('./node_modules')),
+                            connect().use('/', serveStatic(grunt.config.get('config').paths.build))
                         ];
                     }
                 }
@@ -175,11 +176,11 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         var config = grunt.config.get('config');
                         return [
-                            connect().use('/bower_components', connect.static('./bower_components')),
-                            connect().use('/fonts', connect.static('./bower_components/bootstrap/fonts')),
-                            connect().use('/css', connect.static(config.paths.build + '/css')),
-                            connect().use('/js', connect.static(config.paths.instrumented + '/' + config.paths.src + '/js')),
-                            connect().use('/', connect.static(config.paths.src))
+                            connect().use('/node_modules', serveStatic('./node_modules')),
+                            connect().use('/fonts', serveStatic('./node_modules/bootstrap/fonts')),
+                            connect().use('/css', serveStatic(config.paths.build + '/css')),
+                            connect().use('/js', serveStatic(config.paths.instrumented + '/' + config.paths.src + '/js')),
+                            connect().use('/', serveStatic(config.paths.src))
                         ];
                     }
                 }
@@ -285,7 +286,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         dot: true,
-                        cwd: 'bower_components/bootstrap',
+                        cwd: 'node_modules/bootstrap',
                         dest: '<%=config.paths.build%>',
                         src: [
                             'fonts/{,*/}*.{eot,svg,ttf,woff}'
